@@ -42,7 +42,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: artifact_frontend
-          path: build
+          path: artifact_frontend
 
   deploy:
     if: github.ref == 'refs/heads/main'
@@ -57,7 +57,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: artifact_frontend
-          path: build
+          path: artifact_frontend
       - name: Plan 🗺️
         run: yarn tg:prod:plan
       - name: Apply 📲
