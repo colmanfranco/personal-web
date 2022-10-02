@@ -39,10 +39,10 @@ jobs:
         # if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn build
       - name: Add artifact to github 🆙
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: frontend-artifact
-          path: ${{ github.workspace }}
+          path: build
 
   deploy:
     if: github.ref == 'refs/heads/main'
@@ -54,10 +54,10 @@ jobs:
         with:
           ref: main
       - name: Download build
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: frontend-artifact
-          path: ${{ github.workspace }}
+          path: build
       - name: Plan 🗺️
         run: yarn tg:prod:plan
       - name: Apply 📲
