@@ -2,14 +2,15 @@ terraform {
   required_providers {
     vercel = {
       source = "vercel/vercel"
-      version = "~> 0.3"
+      version = "~> 0.4"
     }
   }
 }
 
 resource "vercel_project" "personal_web" {
-  name      = "personal-we-project"
+  name      = "personal-web-project"
   framework = "nextjs"
+  
   git_repository = {
     type = "github"
     repo = "colmanfranco/personal-web"
@@ -29,6 +30,6 @@ resource "vercel_deployment" "personal_web_deployment" {
 
 resource "vercel_project_domain" "example" {
   project_id = vercel_project.personal_web.id
-  domain     = "myproject-domain.vercel.app"
+  domain     = "personal-web.vercel.app"
 }
 
