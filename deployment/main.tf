@@ -7,10 +7,16 @@ terraform {
   }
 }
 
+provider "vercel" {
+  # Or omit this for the api_token to be read
+  # from the VERCEL_API_TOKEN environment variable
+  api_token = var.vercel_api_token
+}
+
 resource "vercel_project" "personal_web" {
   name      = "personal-web-project"
   framework = "nextjs"
-  
+
   git_repository = {
     type = "github"
     repo = "colmanfranco/personal-web"
