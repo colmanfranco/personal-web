@@ -41,8 +41,8 @@ jobs:
       - name: Add artifact to github 🆙
         uses: actions/upload-artifact@v2
         with:
-          name: build
-          path: personal-web/build
+          name: frontend-artifact
+          path: ${{ github.workspace }}
 
   deploy:
     if: github.ref == 'refs/heads/main'
@@ -56,8 +56,8 @@ jobs:
       - name: Download build
         uses: actions/download-artifact@v2
         with:
-          name: build
-          path: personal-web/build
+          name: frontend-artifact
+          path: ${{ github.workspace }}
       - name: Plan 🗺️
         run: yarn tg:prod:plan
       - name: Apply 📲
