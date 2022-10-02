@@ -55,8 +55,10 @@ jobs:
           path: .next/
           if-no-files-found: error
       - name: Plan 🗺️
-        run: yarn tg:prod:plan
+        working-directory: deployment
+        run: yarn tg:prod:plan -var vercel_api_token=VERCEL_API_TOKEN
         env:
           VERCEL_API_TOKEN: ${{ secrets.VERCEL_API_TOKEN }}
       - name: Apply 📲
+        working-directory: deployment
         run: yarn tg:prod:apply
