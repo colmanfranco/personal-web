@@ -1,19 +1,13 @@
 import { render, screen } from '@testing-library/react'
-import Home from '../pages/index'
+import Home from '../pages/index.page'
 import '@testing-library/jest-dom'
-
-
-jest.mock('@storyblok/react', () => ({
-    __esModule: true,
-    useStoryblokState: () => jest.fn(),
-  }));
 
 describe('Home', () => {
   it('should render the loading component', () => {
-    render(<Home />)
+    render(<Home />);
 
-    const heading = screen.getByText('Loading...')
+    const heading = screen.getByText('My site');
 
-    expect(heading).toBeInTheDocument()
+    expect(heading).toBeInTheDocument();
   })
 })

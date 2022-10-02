@@ -17,7 +17,7 @@ const Home = () => {
 
       <main>
         <h1>
-        { 'My Site' }
+        My site
         </h1>
       </main>
 
