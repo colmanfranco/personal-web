@@ -27,16 +27,16 @@ jobs:
         uses: actions/checkout@v3
       - name: Cache Node Dependencies ☊
       - uses: ./.github/actions/node-dependencies
-      - name: Caching Build 🐯
-        id: yarn-cache-build
-      - uses: actions/cache@v3
-        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
-        with:
-          path: ${{ steps.yarn-cache-build.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+      # - name: Caching Build 🐯
+      #   id: yarn-cache-build
+      # - uses: actions/cache@v3
+      #   id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+      #   with:
+      #     path: ${{ steps.yarn-cache-build.outputs.dir }}
+      #     key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
 
       - name: Build 👷🏽‍♀️
-        if: steps.yarn-cache.outputs.cache-hit != 'true'
+        # if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn build
       - name: Add artifact to github 🆙
         uses: actions/upload-artifact@v2
