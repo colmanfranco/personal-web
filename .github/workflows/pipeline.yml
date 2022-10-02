@@ -42,7 +42,8 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: frontend-artifact
-          path: build
+          path: build/output
+          if-no-files-found: error
 
   deploy:
     if: github.ref == 'refs/heads/main'
@@ -57,7 +58,8 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: frontend-artifact
-          path: build
+          path: build/output
+          if-no-files-found: error
       - name: Plan 🗺️
         run: yarn tg:prod:plan
       - name: Apply 📲
