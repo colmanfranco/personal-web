@@ -1,5 +1,5 @@
 resource "vercel_project" "personal_web" {
-  name      = "personal-web-project"
+  name      = "colmanfranco-personal-web"
   framework = "nextjs"
 
   git_repository = {
