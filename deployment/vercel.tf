@@ -27,7 +27,7 @@ resource "vercel_deployment" "personal_web_deployment" {
   production  = true
 }
 
-resource "vercel_project_domain" "example" {
+resource "vercel_project_domain" "personal-web-domain" {
   project_id = vercel_project.personal_web.id
   domain     = "personal-web.colmanfranco.vercel.app"
 }
