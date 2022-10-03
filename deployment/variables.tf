@@ -1,1 +1,1 @@
-variable "vercel_api_token" {}
+# variable "vercel_api_token" {}
