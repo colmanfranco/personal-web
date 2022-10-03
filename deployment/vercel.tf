@@ -25,5 +25,5 @@ resource "vercel_deployment" "personal_web_deployment" {
 
 resource "vercel_project_domain" "personal-web-domain" {
   project_id = data.vercel_project.personal_web.id
-  domain     = "${project_id}.colmanfranco.vercel.app"
+  domain     = "${data.vercel_project.personal_web.id}.colmanfranco.vercel.app"
 }
