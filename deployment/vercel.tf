@@ -8,16 +8,20 @@ resource "vercel_project" "personal_web" {
   }
 }
 
+data "vercel_project" "personal-web-project" {
+  name = "personal-web"
+}
+
 data "vercel_project_directory" "personal_web_directory" {
   path = "../../personal-web"
 }
 
-data "vercel_project" "project_name" {
-  name = "personal-web"
+output "project_id" {
+  value = data.vercel_project.personal-web-project.id
 }
 
 resource "vercel_deployment" "personal_web_deployment" {
-  project_id  = data.vercel_project.project_name.id
+  project_id  = data.vercel_project.personal-web-project.id
   files       = data.vercel_project_directory.personal_web_directory.files
   path_prefix = data.vercel_project_directory.personal_web_directory.path
   production  = true
