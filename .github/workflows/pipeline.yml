@@ -42,6 +42,9 @@ jobs:
   deploy:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./deployment
     needs: [build-app, run-unit-tests]
     name: Deploy 🚀
     steps:
@@ -54,10 +57,8 @@ jobs:
           name: frontend-artifact
           path: .next/
       - name: Plan 🗺️
-        working-directory: deployment
         run: yarn tg:prod:plan -var vercel_api_token=VERCEL_API_TOKEN
         env:
           VERCEL_API_TOKEN: ${{ secrets.VERCEL_API_TOKEN }}
       - name: Apply 📲
-        working-directory: deployment
         run: yarn tg:prod:apply
