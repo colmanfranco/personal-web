@@ -12,8 +12,8 @@ permissions:
   id-token: write
   contents: read
 
-env:
-  VERCEL_API_TOKEN: ${{ secrets.VERCEL_API_TOKEN }}
+#env:
+#  VERCEL_API_TOKEN: ${{ secrets.VERCEL_API_TOKEN }}
 
 jobs:
   run-unit-tests:
@@ -61,6 +61,6 @@ jobs:
           name: frontend-artifact
           path: .next/
       - name: Plan 🗺️
-        run: yarn tg:prod:plan -var vercel_api_token=VERCEL_API_TOKEN
+        run: yarn tg:prod:plan -var vercel_api_token=$VERCEL_API_TOKEN
       - name: Apply 📲
         run: yarn tg:prod:apply
