@@ -53,7 +53,6 @@ jobs:
         with:
           name: frontend-artifact
           path: .next/
-          if-no-files-found: error
       - name: Plan 🗺️
         working-directory: deployment
         run: yarn tg:prod:plan -var vercel_api_token=VERCEL_API_TOKEN
