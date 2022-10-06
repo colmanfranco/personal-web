@@ -31,7 +31,7 @@ jobs:
     if: github.ref == 'refs/heads/main'
     needs: [run-unit-tests]
     runs-on: ubuntu-latest
-    name: Deploy 🚀
+    name: Build 👷🏽‍♀️ and Deploy 🚀
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
