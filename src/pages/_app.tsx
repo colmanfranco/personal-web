@@ -13,11 +13,13 @@ storyblokInit({
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
+      <>
     <Head>
       <title>Franco Colman Mendoza | Software Engineer</title>
       <meta name="robots" content="noindex,nofollow" />
     </Head>
     <Component {...pageProps} />
+      </>
   );
 }
 
