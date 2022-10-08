@@ -4,7 +4,7 @@ import { PreviewProvider } from '.';
 
 const mockPrepareBridgeEvents = jest.fn();
 
-jest.mock('@providers/PreviewProvider/utils', () => ({
+jest.mock('./utils', () => ({
   prepareBridgeEvents: () => mockPrepareBridgeEvents(),
 }));
 
