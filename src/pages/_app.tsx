@@ -18,6 +18,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <PreviewProvider isPreview={isPreview}>
       <Head>
         <title>Franco Colman Mendoza | Software Engineer</title>
+        <link rel="icon" href="/favicon.ico" />
         <meta name="robots" content="noindex,nofollow" />
       </Head>
       <Component {...pageProps} />
