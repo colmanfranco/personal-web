@@ -9,7 +9,7 @@ runs:
       with:
         node-version: 16.16
         cache: 'yarn'
-        cache-dependency-path: .next/yarn-lock.json
+        # cache-dependency-path: .next/yarn-lock.json
 
     - name: Cache node modules ✨
       uses: actions/cache@v3
