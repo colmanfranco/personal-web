@@ -49,5 +49,8 @@ jobs:
         run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_API_TOKEN }}
 
   static-code-analysis:
-    - name: Sonarcloud scan
+    name: SonarCloud Scan 📊
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sonarcloud scan
         uses: SonarSource/sonarcloud-github-action@master
