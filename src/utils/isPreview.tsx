@@ -1,6 +1,6 @@
 const sha1 = require('js-sha1');
 
-export const isPreviewMode = () => {
+export const isPreviewMode = (): boolean => {
   if (typeof window === 'undefined') return false;
 
   const urlParams = new URLSearchParams(window.location.search);
@@ -15,6 +15,6 @@ export const isPreviewMode = () => {
   return token === validationToken && isTokenOlderThan(3600, urlParams);
 };
 
-const isTokenOlderThan = (time: number, urlParams: URLSearchParams) => {
+const isTokenOlderThan = (time: number, urlParams: URLSearchParams): boolean => {
   return parseInt(urlParams.get('_storyblok_tk[timestamp]') as string) > Math.floor(Date.now() / 1000) - time;
 };

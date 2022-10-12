@@ -1,21 +1,32 @@
-import styles from '../styles/Home.module.css';
 import useStoryContent from '../hooks';
+import { NextPage } from 'next';
 
-const Home = () => {
-  // const content = useStoryContent('home');
-  // if (!content) {
-  //   return <div>Loading...</div>;
-  // }
-  // console.log(content)
+type HomeProps = { title: string }
+
+const Home: NextPage = () => {
+  const content = useStoryContent<HomeProps>('home');
+  if (!content) {
+    return <div>Loading...</div>;
+  }
+
+  const { title }: HomeProps = content;
+
+  let i = 0
+  function typeWriter(): void {
+    const titleNode: HTMLElement | null = document.getElementById("demo");
+    if (!titleNode) return;
+    if (i < title.length) {
+      titleNode.innerHTML += title.charAt(i);
+      setTimeout(typeWriter, 50);
+      i++;
+    }
+  }
 
   return (
-    <div className={styles.container}>
       <main>
-        <h1>
-          Franco website
-        </h1>
+        <button onClick={typeWriter}>Click me</button>
+        <h1 id='demo' />
       </main>
-    </div>
   )
 }
 

@@ -3217,6 +3217,11 @@ js-sdsl@^4.1.4:
   resolved "https://registry.yarnpkg.com/js-sdsl/-/js-sdsl-4.1.5.tgz#1ff1645e6b4d1b028cd3f862db88c9d887f26e2a"
   integrity sha512-08bOAKweV2NUC1wqTtf3qZlnpOX/R2DU9ikpjOHs0H+ibQv3zpncVQg6um4uYtRtrwIX8M4Nh3ytK4HGlYAq7Q==
 
+js-sha1@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/js-sha1/-/js-sha1-0.6.0.tgz#adbee10f0e8e18aa07cdea807cf08e9183dbc7f9"
+  integrity sha512-01gwBFreYydzmU9BmZxpVk6svJJHrVxEN3IOiGl6VO93bVKYETJ0sIth6DASI6mIFdt7NmfX9UiByRzsYHGU9w==
+
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
