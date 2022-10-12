@@ -1,0 +1,27 @@
+name: "Sonarcloud Static Code Analysis"
+concurrency: ${{ github.workflow }}
+on:
+  schedule:
+    - cron: '0 11 * * *'
+
+env:
+  # APP_NAME: "Network-app"
+  # GITHUB_TOKEN: ${{ secrets.GH_PRIVATE_PKGS_TOKEN }}
+  SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+jobs:
+  sonarcloud:
+    name: SonarCloud 📊
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+      - uses: ./.github/actions/node-dependencies
+      - name: Run unit test 🧪
+        run: yarn test:ci
+
+      - name: Sonarcloud scan
+        uses: SonarSource/sonarcloud-github-action@master
+        # env:
+        #   GITHUB_TOKEN: ${{ env.GITHUB_TOKEN }}
+        #   SONAR_TOKEN: ${{ env.SONAR_TOKEN }}
