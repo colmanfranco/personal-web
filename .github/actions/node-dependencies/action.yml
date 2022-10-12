@@ -8,6 +8,8 @@ runs:
       uses: actions/setup-node@v3
       with:
         node-version: 16.16
+        cache: 'yarn'
+        cache-dependency-path: yarn-lock.json
 
     - name: Cache node modules ✨
       uses: actions/cache@v3
