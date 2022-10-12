@@ -47,17 +47,3 @@ jobs:
 
       - name: Deploy Project Artifacts to Vercel
         run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_API_TOKEN }}
-
-  static-code-analysis:
-    name: SonarCloud Scan 📊
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - name: Sonarcloud scan
-        uses: SonarSource/sonarcloud-github-action@master
-        # env:
-        #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        #   SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
