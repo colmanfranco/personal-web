@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
       - uses: ./.github/actions/node-dependencies
         with:
           GITHUB_TOKEN: ${{ env.GITHUB_TOKEN }}
