@@ -1,0 +1,22 @@
+name: "Pull Request"
+concurrency: ${{ github.workflow }}
+on:
+  pull_request:
+    branches:
+      - main
+
+# env:
+#   GITHUB_TOKEN: ${{ secrets.GH_PRIVATE_PKGS_TOKEN }}
+
+jobs:
+  test-frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/install-dependencies
+        with:
+          GITHUB_TOKEN: ${{ env.GITHUB_TOKEN }}
+
+      - name: Run test
+        run: yarn test:ci
