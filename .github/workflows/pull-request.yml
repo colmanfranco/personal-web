@@ -15,8 +15,5 @@ jobs:
       - name: Checkout 🛎
         uses: actions/checkout@v3
       - uses: ./.github/actions/node-dependencies
-        with:
-          GITHUB_TOKEN: ${{ env.GITHUB_TOKEN }}
-
       - name: Run test
         run: yarn test:ci
