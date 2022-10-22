@@ -1,5 +1,5 @@
 import { StoriesParams, useStoryblok } from '@storyblok/react';
-import { useIsPreview, usePreviewStory } from '../providers/previewProvider';
+import { useIsPreview, usePreviewStory } from '../../providers/previewProvider';
 
 export default function useStoryContent<S>(slug: string, resolve_relations?: string) {
   const isPreview = useIsPreview();

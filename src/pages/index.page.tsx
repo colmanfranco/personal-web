@@ -1,4 +1,4 @@
-import useStoryContent from '../hooks';
+import useStoryContent from '../hooks/useStoryContent';
 import { NextPage } from 'next';
 
 type HomeProps = { title: string }

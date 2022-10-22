@@ -10,7 +10,7 @@ jest.mock('@storyblok/react', () => ({
   useStoryblok: (slug: string, config: object[never]) => mockedUseStoryblok(slug, config),
 }));
 
-jest.mock('../providers/previewProvider', () => ({
+jest.mock('../../providers/previewProvider', () => ({
   __esModule: true,
   useIsPreview: () => mockIsPreview(),
   usePreviewStory: () => mockUsePreviewStory(),
