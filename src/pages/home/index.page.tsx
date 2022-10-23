@@ -9,7 +9,7 @@ const Home: NextPage = () => {
     return <div>Loading...</div>;
   }
 
-  const { title }: HomeProps = content;
+  const { title } = content;
 
   let i = 0
   function typeWriter(): void {
