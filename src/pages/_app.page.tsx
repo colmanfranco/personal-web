@@ -16,6 +16,7 @@ const darkTheme = createTheme({
 const isPreview = isPreviewMode();
 const token: string | undefined = isPreview ? process.env.NEXT_PUBLIC_STORYBLOK_PREVIEW_KEY : process.env.NEXT_PUBLIC_STORYBLOK_KEY;
 
+console.log(token);
 storyblokInit({
   accessToken: atob(token as string),
   use: [apiPlugin],

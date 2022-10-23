@@ -9,7 +9,7 @@ export const isPreviewMode = (): boolean => {
   const timestamp = urlParams.get('_storyblok_tk[timestamp]');
   const decodedPreviewKey = atob(previewKey);
   const validationString = `${spaceId}:${decodedPreviewKey}:${timestamp}`;
-  const validationToken = sha1.hex(validationString);
+  const validationToken = require('js-sha1').hex(validationString);
   const token = urlParams.get('_storyblok_tk[token]');
 
   return token === validationToken && isTokenOlderThan(3600, urlParams);
