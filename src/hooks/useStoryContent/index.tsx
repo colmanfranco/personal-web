@@ -7,7 +7,6 @@ export default function useStoryContent<S>(slug: string, resolve_relations?: str
   const apiOptions: StoriesParams = { resolve_relations, version };
   const story = useStoryblok(slug, apiOptions);
   const previewStory = usePreviewStory(slug);
-  console.log(story, previewStory)
   const finalStory = previewStory || story;
 
   const result = {
