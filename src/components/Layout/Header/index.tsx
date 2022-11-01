@@ -4,7 +4,7 @@ import {layoutStyles} from "@components/Layout/styles";
 export const Header = () => {
   return(
       <header style={layoutStyles}>
-          <a href='/static/resume.pdf' target='_blank'>
+          <a href='/static/resume.pdf' target='_blank' rel='noreferrer'>
           <Button style={{textTransform: 'none',}}>My resume</Button>
           </a>
       </header>

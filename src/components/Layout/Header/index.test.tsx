@@ -8,11 +8,5 @@ describe('Header test', () => {
 
         const header = screen.getByRole('banner');
         expect(header).toBeInTheDocument();
-
-        const logo = within(header).getByRole('img');
-        expect(logo).toBeInTheDocument();
-        expect(logo).toHaveAttribute('src', '/static/white-logo.svg');
-        expect(logo).toHaveAttribute('alt', 'Personal logo');
-
     });
 })

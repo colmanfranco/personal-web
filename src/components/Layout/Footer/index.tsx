@@ -24,7 +24,7 @@ export const Footer = () => {
       <footer style={layoutStyles}>
           {socialMedias.map((element) => {
               return (
-                  <a key={element.url} href={element.url} target='_blank'>
+                  <a key={element.url} href={element.url} target='_blank' rel='noreferrer'>
                       {createElement(element.icon)}
                   </a>
               )
