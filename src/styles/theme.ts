@@ -4,16 +4,17 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
-const theme = createTheme({
+export const colorTheme = createTheme({
     palette: {
-      mode: 'dark',
+        navy: {
+            main: '#0a192f',
+        },
+        mode: 'dark',
     },
+})
 
-    // typography: {
-    //     fontFamily: [
-    //       'Roboto',
-    //     ].join(','),
-    // }
+const theme = createTheme({
+    ...colorTheme,
   });
 
 export default theme;
