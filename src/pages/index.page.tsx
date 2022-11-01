@@ -4,8 +4,8 @@ import Container from '@mui/material/Container';
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import {useEffect} from "react";
-import CircularProgress from "@mui/material/CircularProgress";
-import {Typography} from "@mui/material";
+import LinearProgress from "@mui/material/LinearProgress";
+import Typography from "@mui/material/Typography";
 
 type HomeProps = { title: string }
 
@@ -16,11 +16,12 @@ const Home: NextPage = () => {
     })
 
     if (!content) {
-      return <Box sx={{ display: 'flex' }}>
-          <CircularProgress />
-      </Box>;
-
-  }
+        return (
+            <Box sx={{ width: '90%', marginLeft: '5%'}}>
+                <LinearProgress />
+            </Box>
+        );
+    }
 
   const { title } = content;
 
