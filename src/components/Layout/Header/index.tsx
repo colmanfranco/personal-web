@@ -4,8 +4,9 @@ import {layoutStyles} from "@components/Layout/styles";
 export const Header = () => {
   return(
       <header style={layoutStyles}>
-          <img src='/static/white-logo.svg' alt='Personal logo' height="50"/>
+          <a href='/static/resume.pdf' target='_blank'>
           <Button style={{textTransform: 'none',}}>My resume</Button>
+          </a>
       </header>
   )
 }

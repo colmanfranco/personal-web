@@ -1,6 +1,8 @@
 import useStoryContent from '../hooks/useStoryContent';
 import { NextPage } from 'next';
 import Container from '@mui/material/Container';
+import Box from "@mui/material/Box";
+import Stack from "@mui/material/Stack";
 
 type HomeProps = { title: string }
 
@@ -25,8 +27,13 @@ const Home: NextPage = () => {
 
   return (
         <Container>
-          <button onClick={typeWriter}>Click me</button>
-          <h1 id='demo' />
+          <Stack direction='row' spacing={5}>
+          <img src='/static/white-logo.svg' alt='Personal logo' height="400"/>
+          <Box>
+            <button onClick={typeWriter}>Click me</button>
+            <h1 id='demo' />
+          </Box>
+          </Stack>
         </Container>
   )
 }
