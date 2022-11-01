@@ -1,5 +1,6 @@
-import useStoryContent from '../../hooks/useStoryContent';
+import useStoryContent from '../hooks/useStoryContent';
 import { NextPage } from 'next';
+import Container from '@mui/material/Container';
 
 type HomeProps = { title: string }
 
@@ -23,9 +24,11 @@ const Home: NextPage = () => {
   }
 
   return (
-      <main>
-        <button onClick={typeWriter}>Click me</button>
-        <h1 id='demo' />
+      <main style={{backgroundColor: '#0a192f'}}>
+        <Container maxWidth="sm" >
+          <button onClick={typeWriter}>Click me</button>
+          <h1 id='demo' />
+        </Container>
       </main>
   )
 }
