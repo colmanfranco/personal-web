@@ -31,7 +31,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <ThemeProvider theme={theme}>
           <Layout>
-              <main style={{ backgroundColor: colorTheme.palette.navy.main, height: '100vh'}}>
+              <main style={{ height: '100%'}}>
                 <Component {...pageProps} />
                 <CssBaseline />
               </main>
