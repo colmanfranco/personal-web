@@ -42,7 +42,7 @@ const Home: NextPage = () => {
   return (
         <Container>
           <Stack direction='row' spacing={10} width='100%' justifyContent='flex-start' alignItems='center'>
-              <Image src='/static/white-logo.svg' alt='Personal logo' height="350" width='150'/>
+              <Image src='/static/white-logo.svg' alt='Personal logo' height="350" width='200'/>
               <Typography variant='h2' width='75%' style={{whiteSpace: 'pre-wrap'}} >
                   {title}
               </Typography>
