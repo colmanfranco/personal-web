@@ -1,10 +1,10 @@
-import { StoriesParams, useStoryblok } from '@storyblok/react';
+import { ISbStoriesParams, useStoryblok } from '@storyblok/react';
 import { useIsPreview, usePreviewStory } from '../../providers/previewProvider';
 
 export default function useStoryContent<S>(slug: string, resolve_relations?: string) {
   const isPreview = useIsPreview();
   const version = isPreview ? 'draft' : 'published';
-  const apiOptions: StoriesParams = { resolve_relations, version };
+  const apiOptions: ISbStoriesParams = { resolve_relations, version };
   const story = useStoryblok(slug, apiOptions);
   const previewStory = usePreviewStory(slug);
   const finalStory = previewStory || story;
