@@ -7,22 +7,23 @@ import {useEffect} from "react";
 import LinearProgress from "@mui/material/LinearProgress";
 import Typography from "@mui/material/Typography";
 import Image from 'next/image';
+import { CircularProgress } from '@mui/material';
 
 type HomeProps = { title: string }
 
 const Home: NextPage = () => {
     const content = useStoryContent<HomeProps>('home');
+
     if (!content) {
         return (
-            <Box sx={{ width: '90%', marginX: '5%'}}>
-                <LinearProgress />
+            <Box sx={{ width: '90%', marginX: '5%', justifyContent: 'center'}}>
+                <CircularProgress />
             </Box>
         );
     }
 
   const { title } = content;
 
-  console.log(title)
   return (
         <Container>
           <Stack direction='row' spacing={10} width='100%' justifyContent='flex-start' alignItems='center'>
