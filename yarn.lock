@@ -988,19 +988,19 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@storyblok/js@^1.8.6":
-  version "1.8.6"
-  resolved "https://registry.yarnpkg.com/@storyblok/js/-/js-1.8.6.tgz#ca210b6828095e72ebdd3281202c6474f6e50392"
-  integrity sha512-MpDhwfs+TBrnfQqr9z+z7SCLnvX6/jZKCasexEvVt0Qp+MvWD7IsQtBu6WnKboTjaR4VLFb69YTk+xUG/Roqgw==
+"@storyblok/js@^2.1.3":
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/@storyblok/js/-/js-2.1.3.tgz#e3b47656d6cb4a50e06ba2c63ba63264627bd017"
+  integrity sha512-lUnCygXMmw3VJQldM5JyEFwraKz2OYN+rt1FvvlWn/55DQfbB/DIgnoQ1mpRw4tJoBqGPRgEQJGOH8e/Q1Vm7Q==
   dependencies:
-    storyblok-js-client "^4.5.8"
+    storyblok-js-client "^5.10.2"
 
-"@storyblok/react@^1.3.3":
-  version "1.3.3"
-  resolved "https://registry.yarnpkg.com/@storyblok/react/-/react-1.3.3.tgz#6746fda89f3d5e3e83996a73d52914d6c78ef306"
-  integrity sha512-wdGTwEIICruicd+SXlLuSoE9T17c73cXFd3WotyMdYUpfdjhx6iWFNrBt53AnOz4Z8RVYgayA8h5/i6qZQzLWg==
+"@storyblok/react@2.0.17":
+  version "2.0.17"
+  resolved "https://registry.yarnpkg.com/@storyblok/react/-/react-2.0.17.tgz#622175945cfce7e456e16eb072ecc8e76e5146ba"
+  integrity sha512-cnKF3YhySD94o1X7LuDOh1ousePWM/SGiQngx4/AcqtDF2GXBD2SBHN9nlQV4AtqtDJUPyFxj6WinBfwI39RAQ==
   dependencies:
-    "@storyblok/js" "^1.8.6"
+    "@storyblok/js" "^2.1.3"
 
 "@swc/helpers@0.4.11":
   version "0.4.11"
@@ -4124,10 +4124,10 @@ stack-utils@^2.0.3:
   dependencies:
     escape-string-regexp "^2.0.0"
 
-storyblok-js-client@^4.5.8:
-  version "4.5.8"
-  resolved "https://registry.yarnpkg.com/storyblok-js-client/-/storyblok-js-client-4.5.8.tgz#862f67d4f25b6c50334e6965bf27f6b6a755ccae"
-  integrity sha512-0Wp7Kn4RdKaKRgMmNDu8c6OC81x1mgeri4ziKDY9BsUZEIGLTNw8KFIWlHYACgMnJQn/6qZaV9kGo8IY4hv6GA==
+storyblok-js-client@^5.10.2:
+  version "5.10.2"
+  resolved "https://registry.yarnpkg.com/storyblok-js-client/-/storyblok-js-client-5.10.2.tgz#049e9637c9a37924093309eb4cdce90c2965d438"
+  integrity sha512-Im/xN9PApDvZbONPYv3SpzjfIfXK63uPf6/eYJPvdIWnzCiWY5hlc2UYkoCR4YoaQBBOEBP1UUcGr5QjesOULg==
 
 string-length@^4.0.1:
   version "4.0.2"
