@@ -4,7 +4,7 @@ import {Twitter} from "@components/Icons/Twitter";
 import {layoutStyles} from "@components/Layout/styles";
 import {createElement} from "react";
 
-const socialMedias = [
+const socialNetworks = [
     {
         icon: Github,
         url: 'https://github.com/colmanfranco/personal-web'
@@ -22,7 +22,7 @@ const socialMedias = [
 export const Footer = () => {
   return (
       <footer style={layoutStyles}>
-          {socialMedias.map((element) => {
+          {socialNetworks.map((element) => {
               return (
                   <a key={element.url} href={element.url} target='_blank' rel='noreferrer'>
                       {createElement(element.icon)}
