@@ -1,9 +1,9 @@
-import { StoryData } from '@storyblok/react';
+import { ISbStoryData } from '@storyblok/react';
 import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 import { prepareBridgeEvents } from './utils';
 
 type Previews = {
-  [slug: string]: StoryData;
+  [slug: string]: ISbStoryData;
 };
 
 type PreviewType = {
@@ -30,7 +30,7 @@ export function PreviewProvider({ children, isPreview }: PreviewProviderProps) {
     document.body.insertBefore(script, document.body.childNodes[0]);
 
     script.onload = prepareBridgeEvents({
-      onInput: (event?: StoryblokEventPayload) => {
+      onInput: (event?) => {
         setPreviews((prevs) => ({
           ...prevs,
           [event?.story?.slug as string]: event?.story,

@@ -1,5 +1,8 @@
+import { ISbEventPayload } from '@storyblok/js';
+
+
 type PrepareBridgeEventsType = {
-    onInput: (payload?: StoryblokEventPayload) => void;
+    onInput: (payload?: ISbEventPayload) => void;
   };
   
   export function prepareBridgeEvents({ onInput }: PrepareBridgeEventsType) {

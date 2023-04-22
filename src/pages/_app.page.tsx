@@ -15,7 +15,7 @@ const isPreview = isPreviewMode();
 const token = isPreview ? process.env.NEXT_PUBLIC_STORYBLOK_PREVIEW_KEY : process.env.NEXT_PUBLIC_STORYBLOK_KEY;
 
 storyblokInit({
-  accessToken: decode(token as string),
+  accessToken: token ? decode(token) : undefined,
   use: [apiPlugin],
 });
 
