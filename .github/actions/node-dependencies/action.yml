@@ -4,11 +4,10 @@ description: ''
 runs:
   using: 'composite'
   steps:
-    - name: Setup Node 🕸️
-      uses: actions/setup-node@v3
+    - name: Setup Bun 🐰
+    - uses: oven-sh/setup-bun@v1
       with:
-        node-version: 20
-        cache: 'yarn'
+        bun-version: latest
 
     - name: Cache node modules ✨
       uses: actions/cache@v3
@@ -23,4 +22,4 @@ runs:
     - name: Install Dependencies 🔧
       if: steps.cache-modules.outputs.cache-hit != 'true'
       shell: bash
-      run: yarn install
+      run: bun install
