@@ -1,34 +1,38 @@
-[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=colmanfranco_personal-web&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=colmanfranco_personal-web)  [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=colmanfranco_personal-web&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=colmanfranco_personal-web)
+# Welcome to Remix!
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+- [Remix Docs](https://remix.run/docs)
 
-## Getting Started
+## Development
 
-First, run the development server:
+From your terminal:
 
-```bash
-yarn dev
+```sh
+npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This starts your app in development mode, rebuilding assets on file changes.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Deployment
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+First, build your app for production:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```sh
+npm run build
+```
 
-## Learn More
+Then run the app in production mode:
 
-To learn more about Next.js, take a look at the following resources:
+```sh
+npm start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Now you'll need to pick a host to deploy it to.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### DIY
 
-## Deploy on Vercel
+If you're familiar with deploying node applications, the built-in Remix app server is production-ready.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Make sure to deploy the output of `remix build`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- `build/`
+- `public/build/`

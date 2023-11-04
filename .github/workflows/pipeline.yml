@@ -15,7 +15,6 @@ env:
   NEXT_PUBLIC_STORYBLOK_PREVIEW_KEY: ${{ secrets.NEXT_PUBLIC_STORYBLOK_PREVIEW_KEY }}
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-  SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
 jobs:
   run-unit-tests:
@@ -26,7 +25,7 @@ jobs:
         uses: actions/checkout@v3
       - uses: ./.github/actions/node-dependencies
       - name: Run unit test 🧪
-        run: yarn test:ci
+        run: bun test
 
   build-and-deploy:
     if: github.ref == 'refs/heads/main'
@@ -39,7 +38,7 @@ jobs:
       - uses: ./.github/actions/node-dependencies
 
       - name: Install Vercel CLI
-        run: yarn global add vercel@latest
+        run: bun install -g vercel@latest
 
       - name: Pull Vercel Environment Information
         run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_API_TOKEN }}
