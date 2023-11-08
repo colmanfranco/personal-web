@@ -8,6 +8,8 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import Header from "./layout/header";
+import Footer from "./layout/footer";
 
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
@@ -22,12 +24,14 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <Header />
+      <body style={{ height: "100vh" }}>
         <Outlet />
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
       </body>
+      <Footer />
     </html>
   );
 }
