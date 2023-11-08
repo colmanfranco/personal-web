@@ -1,4 +1,7 @@
+import { Box } from "@mui/material";
 import type { MetaFunction } from "@remix-run/node";
+import Footer from "~/layout/footer";
+import Header from "~/layout/header";
 
 
 export const meta: MetaFunction = () => {
@@ -10,6 +13,8 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
+    <Box>
+      <Header />
     <div style={{ height: '100vh', fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
       <h1>Welcome to Remix</h1>
       <ul>
@@ -38,5 +43,7 @@ export default function Index() {
         </li>
       </ul>
     </div>
+    <Footer />
+    </Box>
   );
 }
